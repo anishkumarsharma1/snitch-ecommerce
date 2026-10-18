@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../hook/useAuth";
 import { useNavigate } from "react-router";
+import ContinueWithGoogle from "../../../components/ContinueWithGoogle";
 // import ContinueWithGoogle from '../components/ContinueWithGoogle';
 
 const Login = () => {
@@ -228,6 +229,8 @@ const Login = () => {
               >
                 Sign In
               </button>
+
+              <ContinueWithGoogle/>
 
               {/* Divider */}
               <div className="flex items-center gap-4">

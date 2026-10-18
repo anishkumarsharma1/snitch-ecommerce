@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../hook/useAuth";
 import { useNavigate } from "react-router";
+import ContinueWithGoogle from "../../../components/ContinueWithGoogle";
 // import ContinueWithGoogle from '../components/ContinueWithGoogle';
 
 const Register = () => {
@@ -296,7 +297,7 @@ const Register = () => {
                 </span>
               </label>
 
-              <a href="/api/auth/google">Continue With Google</a>
+            
 
               {/* Sign Up Button */}
               <button
@@ -318,6 +319,8 @@ const Register = () => {
               >
                 Sign Up
               </button>
+
+              <ContinueWithGoogle/>
 
               {/* Divider */}
               <div className="flex items-center gap-4">
