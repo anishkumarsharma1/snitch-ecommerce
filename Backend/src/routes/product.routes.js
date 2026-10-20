@@ -2,6 +2,7 @@ import express from "express";
 import { authenticateSeller } from "../middlewares/auth.middleware.js";
 import {
   createProduct,
+  getAllProducts,
   getSellerProducts,
 } from "../controllers/product.controller.js";
 import multer from "multer";
@@ -35,5 +36,12 @@ router.post(
  * @access Private (seller only)
  * **/
 router.get("/seller", authenticateSeller, getSellerProducts);
+
+/**
+ * @Route GET /api/products
+ * @description Get all products
+ * @access Public
+ */
+router.get("/", getAllProducts)
 
 export default router;
